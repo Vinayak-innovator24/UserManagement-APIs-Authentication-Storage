@@ -25,12 +25,13 @@ Using these frameworks empowers us to develop a secure, performant, and scalable
 DB schema of two tables used are:
 1. users Table:
    This table stores user registration information
-![WhatsApp Image 2023-08-12 at 17 37 23](https://github.com/Vinayak-innovator24/UserManagement-Backend/assets/63922686/c4dcd811-069d-41fc-8bbb-d23fd9466d2d)
+   
+   ![WhatsApp Image 2023-08-12 at 17 37 23](https://github.com/Vinayak-innovator24/UserManagement-Backend/assets/63922686/c4dcd811-069d-41fc-8bbb-d23fd9466d2d)
 
-2. data_store Table:
+3. data_store Table:
    This table stores key-value pairs of registered users
 
-![WhatsApp Image 2023-08-12 at 17 34 50](https://github.com/Vinayak-innovator24/UserManagement-Backend/assets/63922686/3027012c-ac4c-42c4-b94d-6b9c4085a3fb)
+   ![WhatsApp Image 2023-08-12 at 17 34 50](https://github.com/Vinayak-innovator24/UserManagement-Backend/assets/63922686/3027012c-ac4c-42c4-b94d-6b9c4085a3fb)
 
 The 'user_id' in the 'data_store' table references the 'user_id' in the 'users' table, establishing a relationship between users and their stored data
 
