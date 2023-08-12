@@ -6,7 +6,7 @@ const { Pool } = require('pg');
 const dbConfig = require('../config/db');
 
 // Create a pool using the imported configuration
-const pool = new Pool(dbConfig);
+const pool = require('../config/pool.js');
 
 // importing errorHandler function
 const errorHandler = require('../handler/errorHandler');

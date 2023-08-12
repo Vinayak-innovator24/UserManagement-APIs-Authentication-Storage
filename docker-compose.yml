@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  dpdzeroassignment:
+    image: dpdzeroassignment
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+      DB_USER: ${DB_USER}
+      DB_HOST: ${DB_HOST}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      POSTGRES_PASSWORD: password
+      POSTGRES_HOST_AUTH_METHOD: trust
+      NODE_SERVER_IP: ${NODE_SERVER_IP}
+      PORT: ${PORT}
+      JWT_SECRET: ${JWT_SECRET}
+    ports:
+      - ${PORT}:${PORT}
+  db:
+    image: postgres
+    restart: always
+    environment:
+      DB_USER: ${DB_USER}
+      DB_HOST: ${DB_HOST}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      POSTGRES_PASSWORD: password
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+  

@@ -6,6 +6,4 @@ node_modules/
 
 # Ignore package-lock.json file
 package-lock.json
-
-# Ignore config directory in which database schema is stored
-config/
+**/.vscode*

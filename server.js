@@ -26,8 +26,13 @@ app.use('/api/data', updateRoute);
 // Delete a key-value pair from the database
 app.use('/api/data', deleteRoute);
 
-const port = process.env.PORT || 3000;
+var notifyServer = app.listen(process.env.PORT,
+  process.env.NODE_SERVER_IP || '127.0.0.1',
+  function() {
+    console.log('server listening on address ' + notifyServer.address().address + ':' + notifyServer.address().port)
+    console.log('server listening on port ' + notifyServer.address().port)
+  })
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+process.on('unhandledRejection', (reason, promise) => {
+  console.log('Unhandled Rejection at:', reason.stack || reason)
+})
